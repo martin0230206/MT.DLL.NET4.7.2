@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -43,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAnnotationHelper.cs" />
+    <Compile Include="HashHelper\SHA256Helper\Hash.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UploadFile\FileSizeVaildator.cs" />
     <Compile Include="UploadFile\ImageFileVaildator.cs" />
@@ -57,5 +60,6 @@
       <Name>MT.Extensions</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

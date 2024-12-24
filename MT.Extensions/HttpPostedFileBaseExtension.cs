@@ -24,7 +24,7 @@ namespace MT.Extensions
 				file == null ||
 				file.ContentLength == 0 ||
 				string.IsNullOrEmpty(file.FileName)
-				);
+			);
 		}
 	}
 }

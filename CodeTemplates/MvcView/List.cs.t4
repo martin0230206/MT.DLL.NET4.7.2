@@ -45,9 +45,9 @@ if (!String.IsNullOrEmpty(LayoutPageFile)) {
 }
 #>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new {@class="btn btn-sm btn-outline-primary"})
 </p>
-<table class="table">
+<table class="table table-sm table-striped table-hover">
     <tr>
 <#
 IEnumerable<PropertyMetadata> properties = ModelMetadata.Properties;
@@ -94,18 +94,16 @@ foreach (PropertyMetadata property in properties) {
 string pkName = GetPrimaryKeyName();
 if (pkName != null) {
 #>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.<#= pkName #> }) |
-            @Html.ActionLink("Details", "Details", new { id=item.<#= pkName #> }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.<#= pkName #> })
+        <td class="text-end" nowrap>
+            <a href="@Url.Action("Edit", "控制器名稱", new {id=item.<#= pkName #>})" class="btn btn-sm btn-outline-primary"><i class="fa-regular fa-pen-to-square"></i>編輯</a> |
+            <a href="@Url.Action("Delete", "控制器名稱", new {id=item.<#= pkName #>})" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i>刪除</a>
         </td>
 <#
 } else {
 #>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        <td class="text-end" nowrap>
+            <a href="@Url.Action("Edit", "控制器名稱", new {id=item.PrimaryKey})" class="btn btn-sm btn-outline-primary"><i class="fa-regular fa-pen-to-square"></i>編輯</a> |
+            <a href="@Url.Action("Delete", "控制器名稱", new {id=item.PrimaryKey})" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i>刪除</a>
         </td>
 <#
 }

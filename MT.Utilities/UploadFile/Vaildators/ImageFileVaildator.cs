@@ -3,12 +3,12 @@ using System.Linq;
 using System.Web;
 using MT.Extensions;
 
-namespace MT.Utilities.UploadFile
+namespace MT.Utilities.UploadFile.Vaildators
 {
-	/// <summary>
-	/// 驗證上傳檔案是否為允許的圖片格式
-	/// </summary>
-	public class ImageFileValidator : IValidator
+    /// <summary>
+    /// 驗證上傳檔案是否為允許的圖片格式
+    /// </summary>
+    public class ImageFileValidator : IValidator
 	{
 		/// <summary>
 		/// 允許的檔案副檔名列表
@@ -29,7 +29,7 @@ namespace MT.Utilities.UploadFile
 		/// - 如果檔案格式符合允許的副檔名和MIME類型，返回成功結果
 		/// - 如果檔案格式不符合允許的格式，返回失敗結果及錯誤訊息
 		/// </returns>
-		public ValidationResult Validate(HttpPostedFileBase file)
+		public ValidationResult Validate(IMyFile file)
 		{
 			if (file.HasFile() == false)
 			{
@@ -53,5 +53,6 @@ namespace MT.Utilities.UploadFile
 
 			return ValidationResult.Ok();
 		}
+
 	}
 }

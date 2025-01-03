@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using MT.Extensions;
 
-namespace MT.Utilities.UploadFile
+namespace MT.Utilities.UploadFile.Vaildators
 {
 	/// <summary>
 	/// 檢查檔案大小的驗證器
@@ -28,7 +28,7 @@ namespace MT.Utilities.UploadFile
 		/// - 如果檔案大小超過限制，返回失敗結果及錯誤訊息
 		/// - 如果檔案大小在限制內，返回成功結果
 		/// </returns>
-		public ValidationResult Validate(HttpPostedFileBase file)
+		public ValidationResult Validate(IMyFile file)
 		{
 			if (file.HasFile() == false)
 			{

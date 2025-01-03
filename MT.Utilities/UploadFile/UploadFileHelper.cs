@@ -45,7 +45,7 @@ namespace MT.Utilities.UploadFile
 		/// 如果所有驗證都通過則返回 true，
 		/// 如果任一驗證失敗則返回 false 且設定 ErrorMessage
 		/// </returns>
-		public bool Validate(HttpPostedFileBase file)
+		public bool Validate(IMyFile file)
 		{
 			foreach (var validator in _validators)
 			{

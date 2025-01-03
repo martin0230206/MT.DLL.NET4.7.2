@@ -12,6 +12,6 @@ namespace MT.Utilities.UploadFile
 		/// </summary>
 		/// <param name="file">要驗證的上傳檔案</param>
 		/// <returns>驗證結果，成功或失敗訊息</returns>
-		ValidationResult Validate(HttpPostedFileBase file);
+		ValidationResult Validate(IMyFile file);
 	}
 }

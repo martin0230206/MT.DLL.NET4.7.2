@@ -38,5 +38,34 @@ namespace MT.Extensions
         {
             return DateTime.TryParse(input, out DateTime result) ? result : (DateTime?)null;
         }
+
+        /// <summary>
+        /// 擷取字串的前 N 個字，若字串少於 N，則直接返回完整字串。
+        /// </summary>
+        /// <param name="text">原始字串</param>
+        /// <param name="length">要擷取的字數</param>
+        /// <param name="addEllipsis">若截斷是否添加省略號</param>
+        /// <returns>擷取後的字串</returns>
+        public static string Truncate(this string text, int length, bool addEllipsis = false)
+        {
+            if (string.IsNullOrEmpty(text))
+            {
+                return string.Empty;
+            }
+
+            if (length <= 0)
+            {
+                return string.Empty; // 若傳入長度為 0 或小於 0，返回空字串
+            }
+
+            if (text.Length > length)
+            {
+                return addEllipsis
+                    ? text.Substring(0, length) + "..."
+                    : text.Substring(0, length);
+            }
+
+            return text;
+        }
     }
 }

@@ -1,7 +1,9 @@
 ﻿using System.IO;
 using System.Linq;
 using System.Web;
-using MT.Extensions;
+//using MT.Extensions;
+using MT.Utilities.UploadFile.Extensions;
+using MT.Utilities.UploadFile.Interfaces;
 
 namespace MT.Utilities.UploadFile.Vaildators
 {

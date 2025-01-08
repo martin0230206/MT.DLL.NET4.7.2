@@ -4,7 +4,8 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
-using MT.Extensions;
+using MT.Utilities.UploadFile.Extensions;
+using MT.Utilities.UploadFile.Interfaces;
 
 namespace MT.Utilities.UploadFile
 {
@@ -72,7 +73,7 @@ namespace MT.Utilities.UploadFile
 		/// 新檔名格式為：GUID（無連字符）+ 原始副檔名
 		/// 例如：8d601c10e75a40959a613be6ec29c948.jpg
 		/// </remarks>
-		public string SaveAs(string path, HttpPostedFileBase file)
+		public string SaveAs(string path, IMyFile file)
 		{
 			if (file.HasFile() == false) return string.Empty;
 
@@ -80,7 +81,7 @@ namespace MT.Utilities.UploadFile
 			string ext = Path.GetExtension(fileName).ToLower();
 			string newFileName = $"{Guid.NewGuid().ToString("N")}{ext}";
 			string fullPath = Path.Combine(path, newFileName);
-			file.SaveAs(fullPath);
+			file.SaveFile(fullPath);
 			return newFileName;
 		}
 	}

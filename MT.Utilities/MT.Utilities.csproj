@@ -70,12 +70,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAnnotation\DataAnnotationHelper.cs" />
+    <Compile Include="Mapper\ObjectMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UploadFile\IMyFile.cs" />
+    <Compile Include="UploadFile\Extensions\IMyFileExtensions.cs" />
+    <Compile Include="UploadFile\Implementations\CoreFile.cs" />
+    <Compile Include="UploadFile\Implementations\MVC5File.cs" />
+    <Compile Include="UploadFile\Interfaces\IMyFile.cs" />
     <Compile Include="UploadFile\Vaildators\ExtValidator.cs" />
     <Compile Include="UploadFile\Vaildators\FileSizeVaildator.cs" />
     <Compile Include="UploadFile\Vaildators\ImageFileVaildator.cs" />
-    <Compile Include="UploadFile\IValidator.cs" />
+    <Compile Include="UploadFile\Interfaces\IValidator.cs" />
     <Compile Include="UploadFile\Vaildators\RequiredValidator.cs" />
     <Compile Include="UploadFile\UploadFileHelper.cs" />
     <Compile Include="UploadFile\ValidationResult.cs" />

@@ -1,6 +1,4 @@
-﻿using System.Web;
-
-namespace MT.Utilities.UploadFile
+﻿namespace MT.Utilities.UploadFile.Interfaces
 {
 	/// <summary>
 	/// 檔案驗證器的介面定義

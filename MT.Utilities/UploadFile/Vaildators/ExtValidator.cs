@@ -1,4 +1,6 @@
-﻿namespace MT.Utilities.UploadFile.Vaildators
+﻿using MT.Utilities.UploadFile.Interfaces;
+
+namespace MT.Utilities.UploadFile.Vaildators
 {
     public class ExtValidator : IValidator
     {

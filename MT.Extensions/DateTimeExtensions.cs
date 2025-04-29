@@ -20,7 +20,7 @@ namespace MT.Extensions
         {
             int daysSinceMonday = ((int)date.DayOfWeek + 6) % 7; // 計算與本週一的距離
             var start = date.AddDays(-daysSinceMonday - 7).Date; // 上週一
-            var end = start.AddDays(6).AddHours(23).AddMinutes(59).AddSeconds(59).AddMilliseconds(999); // 上週日 23:59:59.999
+            var end = start.AddDays(7).AddTicks(-1); // 上週日 23:59:59.999
 
             return (Start: start, End: end);
         }

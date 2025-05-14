@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MT.Utilities", "MT.Utilitie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MT.Security", "MT.Security\MT.Security.csproj", "{72BE6E2A-9A4E-43CD-8F48-CE449CA3D68F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppForTest", "ConsoleAppForTest\ConsoleAppForTest.csproj", "{550AB751-8BE2-4F04-AFAD-1A0BF904E28C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MT.Extensions.Test", "MT.Extensions.Test\MT.Extensions.Test.csproj", "{EF7F8552-B244-4773-895B-07D381DE247C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{72BE6E2A-9A4E-43CD-8F48-CE449CA3D68F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72BE6E2A-9A4E-43CD-8F48-CE449CA3D68F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72BE6E2A-9A4E-43CD-8F48-CE449CA3D68F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550AB751-8BE2-4F04-AFAD-1A0BF904E28C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550AB751-8BE2-4F04-AFAD-1A0BF904E28C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550AB751-8BE2-4F04-AFAD-1A0BF904E28C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550AB751-8BE2-4F04-AFAD-1A0BF904E28C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF7F8552-B244-4773-895B-07D381DE247C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7F8552-B244-4773-895B-07D381DE247C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7F8552-B244-4773-895B-07D381DE247C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7F8552-B244-4773-895B-07D381DE247C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
